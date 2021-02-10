@@ -53,7 +53,13 @@ class Magic_8:
     # from the first to the last with each on a single line.  If there are not items in the 
     # answer_history_list it prints "None yet"
     # it does not return anything!
-            
+    def print_history(self):
+        if self.answer_history_list == []:
+            print("None yet")
+        else:
+            for item in self.answer_history_list:
+                print ("[" + self.index + "]" +  " - " +  self.response)
+        
     # EXTRA POINTS
     # create the generate_n_responses method
     # it takes as input:
