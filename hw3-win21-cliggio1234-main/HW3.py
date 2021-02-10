@@ -1,7 +1,7 @@
-# Your name:
-# Your student id:
-# Your email:
-# List who you have worked with on this homework:
+# Your name: Christina Liggio
+# Your student id: 33453386
+# Your email: cliggio@umich.edu
+# List who you have worked with on this homework: Elizabeth tierny
 
 
 # import the random module for use in this program
@@ -79,7 +79,13 @@ def main():
     bot = Magic_8(answer_list)
 
     # get the first question or quit
-
+    while True:
+        user_input = input("Enter question or 'quit': ")
+        if user_input == 'quit':
+            break
+        else:
+            answer = bot.check_question(user_input)
+            print(f" {user_input} - {answer}")
     # loop while question is not "quit"
    
         # get an answer from check_question
