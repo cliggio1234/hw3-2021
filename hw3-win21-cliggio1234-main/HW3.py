@@ -1,4 +1,4 @@
-﻿# Your name:
+# Your name:
 # Your student id:
 # Your email:
 # List who you have worked with on this homework:
@@ -42,7 +42,12 @@ class Magic_8:
     #         "I already answered that question!”
     # Otherwise it adds the question to the question_list and
     # returns the answer from shake_ball
-
+    def check_question(self, question):
+        if question in self.question_list:
+            return "I already answered that question!"
+        else:
+            self.question_list.append(question)
+            return self.shake_ball()
     # create the print_history method
     # prints "[answer index] question - answer" for each of the indices in the answer_history_list
     # from the first to the last with each on a single line.  If there are not items in the 
